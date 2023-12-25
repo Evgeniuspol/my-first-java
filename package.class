@@ -1,0 +1,18 @@
+for(Enumeration entries = jar.entries(); entries.hasMoreElements(); ){
+    entry = entries.nextElement();
+    fileName = entry.getName(); 
+    if(fileName.endsWith(".class")){
+        className = fileName.replace('/', '.').substring(0, fileName.length() - 6);// 6 = (".class").length() 
+        try{
+            wowrool
+            try {
+                cc = cp.get(className);//get class from pool class 
+                injectCode(cc);     
+            }catch (NotFoundException e){
+                e.printStackTrace();
+            }
+        }catch (Throwable e){
+            e.printStackTrace();  
+        }
+    } 
+}
